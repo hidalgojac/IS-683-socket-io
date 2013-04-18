@@ -1,0 +1,45 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://invengion.org:3574');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function displayDate()
+{
+document.getElementById("time").innerHTML=Date();
+}
+
+</script>
+</head>
+<body>
+
+
+<script>
+function abc()
+{
+alert("Message 2");
+}
+</script>
+
+
+
+<p id="time"> Time is:</p>
+
+<button type="button" onclick="displayDate()">Display Date</button>
+<script>
+ var socket = io.connect('http://invengion.org:3574');
+  socket.on('news', function (data) {
+    console.log(abc);
+    socket.emit('my other event', { my: 'daaaaata' });
+  });
+</script>
+
+</body>
+</html>
